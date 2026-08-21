@@ -71,7 +71,7 @@
     <h3>2.1 Otomatik olarak toplanan veriler (üçüncü taraf servisler aracılığıyla)</h3>
     <table>
       <tr><th>Amaç</th><th>Veri türleri</th><th>Servis</th></tr>
-      <tr><td>Reklam gösterimi</td><td>Reklam kimliği (AAID), IP adresi, cihaz bilgisi, reklam etkileşimleri</td><td>Google AdMob</td></tr>
+      <tr><td>Reklam gösterimi</td><td>Reklam kimliği (AAID), IP adresi, cihaz bilgisi, reklam etkileşimleri</td><td>Google AdMob ve 4. bölümde sayılan uyumlulaştırma ağları</td></tr>
       <tr><td>Kullanım istatistikleri</td><td>Oyun içi olaylar (oyun başlama/bitme, kademe atlama, reklam gösterimi), cihaz modeli, işletim sistemi, uygulama sürümü, ülke düzeyinde yaklaşık konum, uygulama örneği kimliği</td><td>Firebase Analytics</td></tr>
       <tr><td>Çökme ve hata raporlama</td><td>Çökme günlükleri, hata izleri, cihaz durumu, işletim sistemi sürümü</td><td>Firebase Crashlytics</td></tr>
       <tr><td>Satın alma işlemleri</td><td>Satın alma jetonu, ürün kimliği, işlem durumu (ödeme kartı bilgileriniz bize ulaşmaz)</td><td>Google Play Faturalandırma</td></tr>
@@ -98,10 +98,18 @@
     </ul>
 
     <h2>4. Reklamlar ve Onay</h2>
-    <p>Ücretsiz sürüm, Google AdMob aracılığıyla reklam gösterir. Reklamlar kişiselleştirilmiş veya kişiselleştirilmemiş olabilir. Avrupa Ekonomik Alanı, Birleşik Krallık ve belirli bölgelerdeki kullanıcılara, ilk açılışta bir onay ekranı gösterilir. Onayınızı daha sonra Oyun menüsündeki "Gizlilik Seçenekleri" bağlantısından güncelleyebilirsiniz. Ayrıca cihazınızın ayarlarından reklam kimliğinizi sıfırlayabilir veya kişiselleştirilmiş reklamları kapatabilirsiniz. Reklam içeriğini aile dostu bir üst sınıra (PG) ayarladık.</p>
+    <p>Ücretsiz sürüm, Google AdMob aracılığıyla reklam gösterir. Reklamlar kişiselleştirilmiş veya kişiselleştirilmemiş olabilir. Reklam içeriğini en fazla "Teen" (T) derecesiyle sınırlandırdık; yetişkinlere yönelik (MA) içerik gösterilmez.</p>
+
+    <p>AdMob, her reklam alanını <strong>uyumlulaştırma (mediation)</strong> yoluyla üçüncü taraf reklam ağlarının da katılabildiği bir açık artırmaya çıkarır. Uygulama şu ağların yazılım geliştirme kitlerini içerir: <strong>Unity Ads, Pangle, AppLovin, Mintegral, Liftoff Monetize (Vungle) ve InMobi</strong>. Bunlardan hâlihazırda etkin olan yalnızca Unity Ads'tir; diğerleri uygulamada bulunmakla birlikte şu anda reklam sunmamaktadır. Bu ağlar, reklam sunmak ve ölçümlemek amacıyla reklam kimliğinizi ve cihaz bilgilerinizi işleyebilir.</p>
+
+    <p>Avrupa Ekonomik Alanı, Birleşik Krallık ve benzeri düzenlemelerin geçerli olduğu bölgelerdeki kullanıcılara ilk açılışta bir onay ekranı gösterilir. <strong>Güncel reklam iş ortağı listesi bu onay ekranında yer alır</strong> ve yeni bir ağ eklendiğinde orada görünür. Bu bölgelerde onayınızı daha sonra Oyun menüsündeki "Gizlilik Seçenekleri" bağlantısından güncelleyebilirsiniz; onayın zorunlu olmadığı bölgelerde bu bağlantı görünmeyebilir. Her durumda cihazınızın ayarlarından reklam kimliğinizi sıfırlayabilir veya kişiselleştirilmiş reklamları kapatabilirsiniz.</p>
 
     <h2>5. Veri Paylaşımı ve Aktarımı</h2>
-    <p>Verilerinizi satmayız. Yukarıda listelenen amaçlarla verileri işleyen hizmet sağlayıcılarımız Google şirketleridir (AdMob, Firebase, Google Play Faturalandırma). Bu servisler verileri Türkiye dışındaki sunucularda işleyebilir; uluslararası aktarımlar Google'ın standart sözleşme hükümleri gibi güvenceleriyle korunur. Ayrıntılar için:</p>
+    <p>Verilerinizi para karşılığı satmayız. Yukarıda listelenen amaçlarla verileri işleyen taraflar, Google şirketleri (AdMob, Firebase, Google Play Faturalandırma) ve 4. bölümde sayılan reklam ağlarıdır.</p>
+
+    <p>Kişiselleştirilmiş reklamcılığın, bazı ABD eyalet gizlilik yasaları kapsamında kişisel verinin "satışı" veya "paylaşımı" sayıldığını belirtmek isteriz. Bu kapsamdaysanız, onay ekranından veya cihaz ayarlarınızdaki kişiselleştirilmiş reklam tercihinden bu işlemeyi durdurabilirsiniz.</p>
+
+    <p>Bu servisler verileri Türkiye dışındaki sunucularda işleyebilir; uluslararası aktarımlar standart sözleşme hükümleri gibi güvencelerle korunur. Ayrıntılar için:</p>
     <ul>
       <li data-lang="tr">Google Gizlilik Politikası: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></li>
       <li data-lang="tr">Google reklamlarında veri kullanımı: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">policies.google.com/technologies/partner-sites</a></li>
@@ -141,7 +149,7 @@
     <h3>2.1 Data collected automatically (through third-party services)</h3>
     <table>
       <tr><th>Purpose</th><th>Data types</th><th>Service</th></tr>
-      <tr><td>Serving ads</td><td>Advertising ID (AAID), IP address, device info, ad interactions</td><td>Google AdMob</td></tr>
+      <tr><td>Serving ads</td><td>Advertising ID (AAID), IP address, device info, ad interactions</td><td>Google AdMob and the mediation networks listed in section 4</td></tr>
       <tr><td>Usage analytics</td><td>In-app events (game start/end, tier reached, ad shown), device model, OS, app version, country-level approximate location, app instance ID</td><td>Firebase Analytics</td></tr>
       <tr><td>Crash and error reporting</td><td>Crash logs, stack traces, device state, OS version</td><td>Firebase Crashlytics</td></tr>
       <tr><td>Purchases</td><td>Purchase token, product ID, transaction state (your payment card details never reach us)</td><td>Google Play Billing</td></tr>
@@ -168,10 +176,18 @@
     </ul>
 
     <h2>4. Ads and Consent</h2>
-    <p>The free version shows ads through Google AdMob. Ads may be personalised or non-personalised. Users in the European Economic Area, the United Kingdom, and certain regions see a consent screen on first launch. You can update your consent later via the "Privacy Options" link in the Game menu. You can also reset your advertising ID or opt out of personalised ads in your device settings. We set the ad content ceiling to a family-safe rating (PG).</p>
+    <p>The free version shows ads through Google AdMob. Ads may be personalised or non-personalised. We cap ad content at the <strong>"Teen" (T)</strong> rating, so ads rated for mature audiences (MA) are not served.</p>
+
+    <p>AdMob puts each ad slot into an auction in which third-party ad networks can also take part, through <strong>mediation</strong>. The App includes the software development kits of the following networks: <strong>Unity Ads, Pangle, AppLovin, Mintegral, Liftoff Monetize (Vungle), and InMobi</strong>. Of these, only Unity Ads is currently active; the others are present in the App but are not serving ads at this time. These networks may process your advertising ID and device information in order to serve and measure ads.</p>
+
+    <p>Users in the European Economic Area, the United Kingdom, and other regions with comparable rules see a consent screen on first launch. <strong>The current list of advertising partners is shown on that consent screen</strong> and any newly added network appears there. In those regions you can update your consent later via the "Privacy Options" link in the Game menu; where consent is not required, that link may not be shown. In all cases you can reset your advertising ID or opt out of personalised ads in your device settings.</p>
 
     <h2>5. Data Sharing and Transfers</h2>
-    <p>We do not sell your data. Our processors for the purposes above are Google companies (AdMob, Firebase, Google Play Billing). These services may process data on servers outside your country; international transfers are safeguarded by mechanisms such as Google's standard contractual clauses. For details:</p>
+    <p>We do not sell your data for money. The parties that process data for the purposes above are Google companies (AdMob, Firebase, Google Play Billing) and the ad networks listed in section 4.</p>
+
+    <p>Please note that personalised advertising may be treated as a "sale" or "sharing" of personal information under some US state privacy laws. If those laws apply to you, you can stop that processing through the consent screen or the personalised-ads setting on your device.</p>
+
+    <p>These services may process data on servers outside your country; international transfers are safeguarded by mechanisms such as standard contractual clauses. For details:</p>
     <ul>
       <li data-lang="en">Google Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></li>
       <li data-lang="en">How Google uses data in ads: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">policies.google.com/technologies/partner-sites</a></li>
